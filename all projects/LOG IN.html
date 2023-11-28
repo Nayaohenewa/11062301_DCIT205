@@ -1,65 +1,116 @@
 <!DOCTYPE html>
-<HTML>
-    <head>
-<style>
-     body {
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>School Admissions</title>
+    <style>
+        body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 0;
+            background-image: url('overview.jpg');
+        
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             display: flex;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
+            margin: 0;
         }
 
-        #login-container {
-            background-color: rgb(52, 66, 95);
-            padding: 20px;
+        .container {
+            background-color:rgba(255, 255, 255, 0.7);
+            padding: 30px;
             border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 500px;
-            text-align: center;
-        }
-
-        input {
             width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            box-sizing: border-box;
+            max-width: 500px;
         }
 
-        button {
-            background-color: gold;
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
             color: white;
-            padding: 10px;
+            padding: 10px 20px;
             border: none;
             border-radius: 4px;
             cursor: pointer;
             width: 100%;
+            font-size: 18px;
         }
 
-        button:hover {
-            background-color: goldenrod;
+        input[type="submit"]:hover {
+            background-color: #0056b3;
         }
-</style>
+    </style>
 </head>
-    <body style="background-color: rgb(61, 83, 180); color: #f4f4f4;"></body>
-        <div id="login-container">
-            <h2>Email Login</h2>
-            <form id="login-form">
-                <input type="email" id="email" placeholder="Email" required>
-                <input type="password" id="password" placeholder="Password" required>
-                <button type="button" onclick="login()">Login</button>
-            </form>
-        </div>
+<body>
     
-        <script>
-            function login() {
-                // You can add your login logic here using JavaScript
-                // For simplicity, let's just show an alert for now
-                alert('login to this page?');
-            }
-        </script>
-    </body>
-</HTML>
+
+    <div class="container">
+        <h1>LOGIN</h1>
+        <form id="admissionForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="dob">Date of Birth</label>
+                <input type="date" id="dob" name="dob" required>
+            </div>
+            <div class="form-group">
+                <label for="Level">Level</label>
+                <select id="Level" name="Level" required>
+                    <option value="l100">level 100</option>
+                    <option value="l200">level 200</option>
+                    <option value="l300">level 300</option>
+                    <option value="l400">level 400</option>
+                    <option value="l500">level 500</option>
+                    <option value="l600">level 600</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit Application">
+            </div>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('admissionForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            let formData = new FormData(this);
+
+            // Perform your desired actions here such as sending the form data to the server
+            console.log('Form data submitted:', formData);
+        });
+    </script>
+</body>
+</html>

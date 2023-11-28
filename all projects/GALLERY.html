@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+<head><script type="text/javascript" src="/___vscode_livepreview_injected_script"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>School Gallery</title>
@@ -26,8 +26,8 @@
         .image-box {
             position: relative;
             display: inline-block;
-            width: 200px;
-            height: 200px;
+            width: 3000px;
+            height: 400px;
             overflow: hidden;
             border: 2px solid rgb(70, 70, 94);
             border-radius: 6px;
@@ -95,40 +95,41 @@
         }
         
         .flex-container2{
-            flex-direction: column;
+            flex-direction: column-reverse;
             background-color: #3b2c2c;
+            color: goldenrod;
 
         }
 
     </style>
     
 </head>
-<body> 
-
+<body>
     <div class="flex-container">
         <div class="logo-container">
             <img class="logo" src="comScience_logo.png"
-
-</div>
+        </div>
     </div>
-    <div class="container">
+
+    </div>
+    <div class="container" >
         <div class="image-box" onclick="openModal('school1.jpg')">
-            <img src="school1.jpg" alt="School 1">
+            <img src="balm .jpg" alt="balm Library">
         </div>
         <div class="image-box" onclick="openModal('school2.jpg')">
-            <img src="school2.jpg" alt="School 2">
+            <img src="night.jpg" alt="night view">
         </div>
         <div class="image-box" onclick="openModal('school3.jpg')">
-            <img src="school3.jpg" alt="School 3">
+            <img src="Ug of gh.jpg" alt="universityofghana">
         </div>
          <div class="image-box" onclick="openModal('school3.jpg')">
-            <img src="school3.jpg" alt="School 4">
+            <img src="view - Copy.jpg" alt="overview>
         </div> 
         <div class="image-box" onclick="openModal('school3.jpg')">
-            <img src="school3.jpg" alt="School 5">
+            <img src="STUDENTS.jpg" alt="students">
         </div>
         <div class="image-box" onclick="openModal('school3.jpg')">
-            <img src="school3.jpg" alt="School 6">
+            <img src="school.jpg" alt="School 6">
         </div>
     </div> 
     <div id="myModal" class="modal">
@@ -137,22 +138,13 @@
             <img id="modalImage" src="" alt="Modal Image">
         </div>
     </div>
+    
+    
+    <div class="flex-container2">
+        <div class="logo-container">
+            <img class="logo" src="comScience_logo.png"></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <div>&copy;universityofghanalegon</div>
 
-    <script>
-        function openModal(image) {
-            document.getElementById('myModal').style.display = 'block';
-            document.getElementById('modalImage').src = image;
-        }
-
-        function closeModal() {
-            document.getElementById('myModal').style.display = 'none';
-        }
-    </script>
- <div class="flex-container 2">
-    <div>1</div>
-
-</div>
-</div>
 
    
   

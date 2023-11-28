@@ -12,15 +12,16 @@ header{
     text-align: right;
     
 }
+
+.logo-container{
+    display: flex;
+    align-items: center;
+} 
 .logo{
     max-width:20%;
     height: auto;
 }
 
-.logo-container{
-    display: flex;
-    align-items: center;
-}
 .container {
     padding: 20px;
 }
